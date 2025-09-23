@@ -1,0 +1,424 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+/* CSS Reset and Base Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    background-image: url('background-house.webp');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: #FFFFFF;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+/* Background */
+.background-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, rgba(99, 102, 241, 0.7), rgba(139, 92, 246, 0.7));
+    z-index: 1;
+}
+
+.background-overlay::after {
+    content: none; /* Remove overlay gradient */
+}
+
+/* Container */
+.container {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+    position: relative;
+    z-index: 2;
+}
+
+/* Header */
+.header {
+    text-align: center;
+    margin-bottom: 40px;
+    animation: slideInDown 0.8s ease-out;
+}
+
+.header h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 10px;
+    text-shadow: 0 3px 15px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 10;
+}
+
+.header h1 i {
+    margin-right: 15px;
+    color: #ffd700;
+    text-shadow: 0 0 20px rgba(255, 215, 0, 0.5);
+}
+
+.subtitle {
+    font-size: 1.1rem;
+    color: white;
+    font-weight: 300;
+    margin-top: 5px;
+    text-shadow: 0 2px 10px rgba(0, 0, 0, 0.7);
+    position: relative;
+    z-index: 10;
+}
+
+/* Main Content */
+.main-content {
+    width: 100%;
+    max-width: 480px;
+    animation: slideInUp 0.8s ease-out 0.2s both;
+}
+
+/* Form */
+.prediction-form {
+    background: rgba(17, 24, 39, 0.95);
+    backdrop-filter: blur(20px);
+    border-radius: 20px;
+    padding: 40px;
+    box-shadow: 
+        0 25px 50px rgba(0, 0, 0, 0.4),
+        0 1px 0px rgba(255, 255, 255, 0.1) inset;
+    border: 1px solid rgba(75, 85, 99, 0.3);
+    position: relative;
+    z-index: 3;
+}
+
+.form-section {
+    display: flex;
+    flex-direction: column;
+    gap: 24px;
+}
+
+/* Input Groups */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.input-label {
+    display: flex;
+    align-items: center;
+    font-weight: 600;
+    color: #e5e7eb;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.input-label i {
+    margin-right: 8px;
+    color: #667eea;
+    width: 16px;
+}
+
+/* Form Inputs */
+.form-input, .form-select {
+    padding: 14px 16px;
+    border: 2px solid #374151;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: rgba(31, 41, 55, 0.8);
+    color: #e5e7eb;
+    font-family: inherit;
+}
+
+.form-input:focus, .form-select:focus {
+    outline: none;
+    border-color: #6366f1;
+    box-shadow: 0 0 0 3px rgba(99, 102, 241, 0.2);
+    transform: translateY(-1px);
+    background: rgba(31, 41, 55, 0.9);
+}
+
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+/* Switch Field (Radio Buttons) */
+.switch-field {
+    display: flex;
+    overflow: hidden;
+    border-radius: 12px;
+    border: 2px solid #374151;
+    background: rgba(31, 41, 55, 0.8);
+}
+
+.switch-field input {
+    position: absolute !important;
+    clip: rect(0, 0, 0, 0);
+    height: 1px;
+    width: 1px;
+    border: 0;
+    overflow: hidden;
+}
+
+.switch-field label {
+    background: rgba(31, 41, 55, 0.8);
+    color: #d1d5db;
+    font-size: 0.9rem;
+    font-weight: 500;
+    text-align: center;
+    padding: 12px 8px;
+    flex: 1;
+    border-right: 1px solid #374151;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.switch-field label:last-child {
+    border-right: none;
+}
+
+.switch-field label:hover {
+    background: rgba(55, 65, 81, 0.8);
+    color: #e5e7eb;
+}
+
+.switch-field input:checked + label {
+    background: linear-gradient(135deg, #6366f1, #8b5cf6);
+    color: white;
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(99, 102, 241, 0.4);
+    transform: scale(1.02);
+    z-index: 1;
+}
+
+/* Estimate Button */
+.estimate-btn {
+    background: linear-gradient(135deg, #6366f1 0%, #8b5cf6 100%);
+    border: none;
+    border-radius: 14px;
+    padding: 16px 24px;
+    color: white;
+    font-size: 1.1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 8px;
+    box-shadow: 0 8px 20px rgba(99, 102, 241, 0.3);
+    position: relative;
+    overflow: hidden;
+}
+
+.estimate-btn::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255,255,255,0.2), transparent);
+    transition: left 0.5s;
+}
+
+.estimate-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 12px 25px rgba(99, 102, 241, 0.4);
+}
+
+.estimate-btn:hover::before {
+    left: 100%;
+}
+
+.estimate-btn:active {
+    transform: translateY(0);
+}
+
+.loading-spinner {
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    from { transform: rotate(0deg); }
+    to { transform: rotate(360deg); }
+}
+
+/* Price Result */
+.price-result {
+    background: linear-gradient(135deg, rgba(17, 24, 39, 0.8) 0%, rgba(31, 41, 55, 0.8) 100%);
+    border: 2px solid #374151;
+    border-radius: 14px;
+    padding: 20px;
+    text-align: center;
+    min-height: 80px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.result-placeholder {
+    color: #9ca3af;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+}
+
+.result-placeholder i {
+    font-size: 1.5rem;
+    color: #6b7280;
+}
+
+.result-placeholder p {
+    font-size: 0.9rem;
+    margin: 0;
+}
+
+.price-result.has-result {
+    background: linear-gradient(135deg, rgba(5, 150, 105, 0.2) 0%, rgba(16, 185, 129, 0.2) 100%);
+    border-color: #10b981;
+    animation: priceReveal 0.6s ease-out;
+}
+
+.price-result h2 {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #10b981;
+    margin: 0;
+    text-shadow: 0 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+@keyframes priceReveal {
+    from {
+        transform: scale(0.9);
+        opacity: 0;
+    }
+    to {
+        transform: scale(1);
+        opacity: 1;
+    }
+}
+
+/* Footer */
+.footer {
+    margin-top: 40px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 0.9rem;
+    animation: fadeIn 1s ease-out 0.5s both;
+}
+
+/* Animations */
+@keyframes slideInDown {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideInUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .container {
+        padding: 15px;
+    }
+    
+    .header h1 {
+        font-size: 2rem;
+    }
+    
+    .prediction-form {
+        padding: 30px 24px;
+    }
+    
+    .switch-field label {
+        padding: 10px 6px;
+        font-size: 0.85rem;
+    }
+    
+    .form-input, .form-select {
+        padding: 12px 14px;
+    }
+    
+    .estimate-btn {
+        padding: 14px 20px;
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .switch-field {
+        flex-wrap: wrap;
+    }
+    
+    .switch-field label {
+        flex: 1 1 calc(50% - 1px);
+        min-width: 80px;
+    }
+}
+
+/* Dark mode support */
+@media (prefers-color-scheme: dark) {
+    .prediction-form {
+        background: rgba(30, 41, 59, 0.95);
+        color: #e2e8f0;
+    }
+    
+    .input-label {
+        color: #e2e8f0;
+    }
+    
+    .form-input, .form-select {
+        background: rgba(51, 65, 85, 0.8);
+        border-color: #475569;
+        color: #e2e8f0;
+    }
+    
+    .form-input::placeholder {
+        color: #94a3b8;
+    }
+    
+    .switch-field label {
+        background: rgba(51, 65, 85, 0.8);
+        color: #cbd5e1;
+        border-color: #475569;
+    }
+}
