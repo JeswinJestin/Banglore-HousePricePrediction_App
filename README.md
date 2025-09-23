@@ -131,3 +131,10 @@ Then open [http://localhost:8080](http://localhost:8080) in your browser.
 ## 👤 Author
 
 Jeswin Thomas Jestin
+
+## 📸 Screenshots
+
+Here are some screenshots of the application:
+
+![Screenshot 1](images/screenshot1.png)
+![Screenshot 2](images/screenshot2.png)
