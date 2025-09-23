@@ -1,3 +1,5 @@
+<img width="1820" height="959" alt="Image" src="https://github.com/user-attachments/assets/26ccb68e-161c-4ae3-bdf2-3fa3d5d3809b" />
+
 ### **Repository Name**
 
 ```
@@ -123,6 +125,7 @@ python server.py
 cd frontend
 python -m http.server 8080
 ```
+<img width="1821" height="956" alt="Image" src="https://github.com/user-attachments/assets/bc18a3ee-9f54-49fd-9ee0-4b52a9f9243f" />
 
 Then open [http://localhost:8080](http://localhost:8080) in your browser.
 
