@@ -1,5 +1,3 @@
-## 📂 GitHub Repo Details
-
 ### **Repository Name**
 
 ```
