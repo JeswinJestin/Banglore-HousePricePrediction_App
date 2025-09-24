@@ -1,5 +1,3 @@
-## 📂 GitHub Repo Details
-
 ### **Repository Name**
 
 ```
@@ -12,7 +10,7 @@ A Machine Learning web app to predict Bangalore home prices.
 Frontend built with HTML, CSS, JavaScript, and jQuery. Backend powered by Flask (Python).
 
 ---
-
+<img width="1821" height="956" alt="Image" src="https://github.com/user-attachments/assets/c46ae348-aac5-41d5-a2f4-7f2e8df0a14f" />
 
 ## **Folder Structure**
 
