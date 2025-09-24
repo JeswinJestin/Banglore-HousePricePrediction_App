@@ -136,5 +136,5 @@ Jeswin Thomas Jestin
 
 Here are some screenshots of the application:
 
-![Screenshot 1](images/Screenshot 2025-09-24 045450.png)
-![Screenshot 2](images/Screenshot 2025-09-24 045524.png)
+![Screenshot 1](images/Screenshot1.png)
+![Screenshot 2](images/Screenshot2.png)
